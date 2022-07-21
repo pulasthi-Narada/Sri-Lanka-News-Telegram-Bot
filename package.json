@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/pulasthi-Narada/Sri-Lanka-News-Telegram-Bot/issues"
   },
-  "homepage": "https://github.com/pulasthi-Narada/Sri-Lanka-News-Telegram-Bot#readme"
+  "homepage": "https://github.com/pulasthi-Narada/Sri-Lanka-News-Telegram-Bot#readme",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.12",
+    "dotenv": "^16.0.1",
+    "xml-to-json-stream": "^1.1.0"
+  }
 }
