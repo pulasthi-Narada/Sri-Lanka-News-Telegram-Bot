@@ -10,14 +10,30 @@ const token = process.env.TELEGRAMTOKEN;
 // Create a bot that uses 'polling' to fetch new updates
 const bot = new TelegramBot(token, { polling: true });
 
-// Listen for any kind of message. There are different kinds of
-// messages.
-bot.on('message', (msg) => {
+// Listen for any kind of message.
+bot.on('message', async (msg) => {
   const chatId = msg.chat.id;
 
-  // send a message to the chat acknowledging receipt of their message
+  // get message
+  const messageText = msg.text.trim();
 
-  bot.sendMessage(chatId, 'Received your message');
+  if (
+    messageText !== 'English' &&
+    messageText !== 'සිංහල' &&
+    messageText !== 'தமிழ்'
+  ) {
+    await bot.sendMessage(
+      chatId,
+      'News provider: adaderana \n\n http://www.adaderana.lk/',
+    );
 
-  console.log(msg);
+    const opts = {
+      reply_to_message_id: msg.message_id,
+      reply_markup: JSON.stringify({
+        keyboard: [['English'], ['සිංහල'], ['தமிழ்']],
+      }),
+    };
+    bot.sendMessage(msg.chat.id, 'ok.', opts);
+    console.log(msg);
+  }
 });
