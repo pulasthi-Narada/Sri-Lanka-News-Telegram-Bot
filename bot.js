@@ -1,7 +1,4 @@
 require('dotenv').config();
-const cheerio = require('cheerio');
-const xmlToJson = require('xml-to-json-stream');
-const parser = xmlToJson({ attributeMode: false });
 const TelegramBot = require('node-telegram-bot-api');
 
 // set Telegram  token to access the HTTP API
