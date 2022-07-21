@@ -33,22 +33,21 @@ bot.on('message', async (msg) => {
         keyboard: [['/English'], ['/සිංහල'], ['/தமிழ்']],
       }),
     };
-    bot.sendMessage(msg.chat.id, 'ok.', opts);
+    await bot.sendMessage(msg.chat.id, 'ok.', opts);
   }
 });
 
 // Matches /English sent english news
-bot.onText(/\/English/, function onLoveText(msg) {
-  bot.sendMessage(msg.chat.id, 'English?');
+bot.onText(/\/English/, async function onLoveText(msg) {
+  await bot.sendMessage(msg.chat.id, 'English?');
 });
 
 // Matches /සිංහල sent sinhala news
-bot.onText(/\/සිංහල/, function onLoveText(msg) {
-  bot.sendMessage(msg.chat.id, 'සිංහල?');
+bot.onText(/\/සිංහල/, async function onLoveText(msg) {
+  await bot.sendMessage(msg.chat.id, 'සිංහල?');
 });
 
 // Matches /தமிழ் sent tamil news
-bot.onText(/\/தமிழ்/, function onLoveText(msg) {
-  bot.sendMessage(msg.chat.id, 'தமிழ்?');
+bot.onText(/\/தமிழ்/, async function onLoveText(msg) {
+  await bot.sendMessage(msg.chat.id, 'தமிழ்?');
 });
-
