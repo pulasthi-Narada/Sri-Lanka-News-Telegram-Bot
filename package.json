@@ -4,7 +4,8 @@
   "description": "Sri Lanka news telegram bot",
   "main": "bot.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon bot.js"
   },
   "repository": {
     "type": "git",
@@ -19,6 +20,8 @@
   "dependencies": {
     "cheerio": "^1.0.0-rc.12",
     "dotenv": "^16.0.1",
+    "node-telegram-bot-api": "^0.58.0",
+    "nodemon": "^2.0.19",
     "xml-to-json-stream": "^1.1.0"
   }
 }
