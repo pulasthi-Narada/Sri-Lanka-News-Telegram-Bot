@@ -1,0 +1,19 @@
+{
+  "name": "sri-lanka-news-telegram-bot",
+  "version": "1.0.0",
+  "description": "Sri Lanka news telegram bot",
+  "main": "bot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pulasthi-Narada/Sri-Lanka-News-Telegram-Bot.git"
+  },
+  "author": "Pulasthi Narada",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pulasthi-Narada/Sri-Lanka-News-Telegram-Bot/issues"
+  },
+  "homepage": "https://github.com/pulasthi-Narada/Sri-Lanka-News-Telegram-Bot#readme"
+}
