@@ -18,9 +18,9 @@ bot.on('message', async (msg) => {
   const messageText = msg.text.trim();
 
   if (
-    messageText !== 'English' &&
-    messageText !== 'සිංහල' &&
-    messageText !== 'தமிழ்'
+    messageText !== '/English' &&
+    messageText !== '/සිංහල' &&
+    messageText !== '/தமிழ்'
   ) {
     await bot.sendMessage(
       chatId,
@@ -30,10 +30,25 @@ bot.on('message', async (msg) => {
     const opts = {
       reply_to_message_id: msg.message_id,
       reply_markup: JSON.stringify({
-        keyboard: [['English'], ['සිංහල'], ['தமிழ்']],
+        keyboard: [['/English'], ['/සිංහල'], ['/தமிழ்']],
       }),
     };
     bot.sendMessage(msg.chat.id, 'ok.', opts);
-    console.log(msg);
   }
 });
+
+// Matches /English sent english news
+bot.onText(/\/English/, function onLoveText(msg) {
+  bot.sendMessage(msg.chat.id, 'English?');
+});
+
+// Matches /සිංහල sent sinhala news
+bot.onText(/\/සිංහල/, function onLoveText(msg) {
+  bot.sendMessage(msg.chat.id, 'සිංහල?');
+});
+
+// Matches /தமிழ் sent tamil news
+bot.onText(/\/தமிழ்/, function onLoveText(msg) {
+  bot.sendMessage(msg.chat.id, 'தமிழ்?');
+});
+
