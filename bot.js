@@ -1,6 +1,8 @@
 require('dotenv').config();
 const TelegramBot = require('node-telegram-bot-api');
 
+const news = require('./news');
+
 // set Telegram  token to access the HTTP API
 const token = process.env.TELEGRAMTOKEN;
 
@@ -36,12 +38,12 @@ bot.on('message', async (msg) => {
 
 // Matches /English sent english news
 bot.onText(/\/English/, async function onLoveText(msg) {
-  await bot.sendMessage(msg.chat.id, 'English?');
+  await bot.sendMessage(msg.chat.id, 'ff');
 });
 
 // Matches /සිංහල sent sinhala news
 bot.onText(/\/සිංහල/, async function onLoveText(msg) {
-  await bot.sendMessage(msg.chat.id, 'සිංහල?');
+  await bot.sendMessage(msg.chat.id, 'd');
 });
 
 // Matches /தமிழ் sent tamil news
