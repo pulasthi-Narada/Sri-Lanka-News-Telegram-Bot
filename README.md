@@ -16,7 +16,7 @@ node-telegram-bot-api, axios, cheerio, dotenv, nodemon
 
 Project Demo:
 
-Go to this Link for awake heroku news telegram bot.
+Go to this Link for wake heroku news telegram bot.
 
 https://sl-news-telegrambot.herokuapp.com/
 
