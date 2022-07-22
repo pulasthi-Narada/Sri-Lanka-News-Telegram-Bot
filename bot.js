@@ -1,7 +1,7 @@
 require('dotenv').config();
 const TelegramBot = require('node-telegram-bot-api');
 
-const news = require('./news');
+const getNews = require('./news');
 
 // set Telegram  token to access the HTTP API
 const token = process.env.TELEGRAMTOKEN;
@@ -23,7 +23,7 @@ bot.on('message', async (msg) => {
   ) {
     await bot.sendMessage(
       chatId,
-      'News provider: adaderana \n\n http://www.adaderana.lk/',
+      'News provider: hirunews \n\n https://www.hirunews.lk/',
     );
 
     const opts = {
@@ -36,17 +36,49 @@ bot.on('message', async (msg) => {
   }
 });
 
-// Matches /English sent english news
-bot.onText(/\/English/, async function onLoveText(msg) {
-  await bot.sendMessage(msg.chat.id, 'ff');
-});
+const getNewsforPreferredLanguage = async () => {
+  let news;
+  let ReadMore;
 
-// Matches /සිංහල sent sinhala news
-bot.onText(/\/සිංහල/, async function onLoveText(msg) {
-  await bot.sendMessage(msg.chat.id, 'd');
-});
+  // Matches /English get english news
+  bot.onText(/\/English/, async function onLoveText(msg) {
+    news = await getNews('/English');
+    ReadMore = 'Read More';
 
-// Matches /தமிழ் sent tamil news
-bot.onText(/\/தமிழ்/, async function onLoveText(msg) {
-  await bot.sendMessage(msg.chat.id, 'தமிழ்?');
-});
+    await sentnews(news, ReadMore, msg);
+  });
+
+  // Matches /සිංහල get sinhala news
+  bot.onText(/\/සිංහල/, async function onLoveText(msg) {
+    news = await getNews('/සිංහල');
+    ReadMore = 'වැඩිදුර කියවන්න';
+
+    await sentnews(news, ReadMore, msg);
+  });
+
+  // Matches /தமிழ் get tamil news
+  bot.onText(/\/தமிழ்/, async function onLoveText(msg) {
+    news = await getNews('/தமிழ்');
+    ReadMore = 'மேலும் படிக்க';
+
+    await sentnews(news, ReadMore, msg);
+  });
+};
+
+//set news to Telegram
+const sentnews = async (news, ReadMore, msg) => {
+  // reverse news array for get latest news end of chat
+  news.reverse();
+
+  //sent news to Telegram bot
+  for (const n of news) {
+    await bot.sendMessage(
+      msg.chat.id,
+      `${n.image} \n\n ${n.title} \n\n ${ReadMore} \n ${n.ReadMore}\n\n ${n.dateAndTime}`,
+    );
+  }
+};
+
+(async function () {
+  await getNewsforPreferredLanguage();
+})();

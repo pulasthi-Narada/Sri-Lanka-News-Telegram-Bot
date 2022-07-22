@@ -123,9 +123,4 @@ const scrapNewsFromPage = (page) => {
   return news;
 };
 
-// (async function () {
-//   const t = await GetNewsForSelectedLanguage('/தமிழ்');
-
-// })();
-
 module.exports = GetNewsForSelectedLanguage;
