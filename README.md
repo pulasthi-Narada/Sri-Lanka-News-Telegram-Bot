@@ -18,11 +18,11 @@ Project Demo:
 
 Go to this Link for awake heroku news telegram bot.
 
-https://sl-news-telegrambot.herokuapp.com/
+<a href="https://sl-news-telegrambot.herokuapp.com/" target="_blank">https://sl-news-telegrambot.herokuapp.com/</a>
 
 After that Run news telegram bot in telegram.
 
-https://t.me/DailyNewsForSriLanka_bot
+<a href="https://t.me/DailyNewsForSriLanka_bot" target="_blank">https://t.me/DailyNewsForSriLanka_bot</a>
 
 <img src="img/1.png"><br/>
 <img src="img/2.png"><br/>
