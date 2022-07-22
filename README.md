@@ -18,7 +18,7 @@ Project Demo:
 
 Go to this Link for awake heroku news telegram bot.
 
-sl-news-telegrambot.herokuapp.com/
+https://sl-news-telegrambot.herokuapp.com/
 
 After that Run news telegram bot in telegram.
 
