@@ -12,15 +12,17 @@ This Project use hirunews website.
 
 Used packages:
 
-node-telegram-bot-api
+node-telegram-bot-api, axios, cheerio, dotenv, nodemon
 
-axios
+Project Demo:
 
-cheerio
+Go to this Link for awake heroku news telegram bot.
 
-dotenv
+https://sl-news-telegrambot.herokuapp.com/
 
-nodemon
+After that Run news telegram bot in telegram.
+
+https://t.me/DailyNewsForSriLanka_bot
 
 <img src="img/1.png"><br/>
 <img src="img/2.png"><br/>
