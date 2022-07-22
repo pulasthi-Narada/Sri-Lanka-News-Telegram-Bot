@@ -10,7 +10,7 @@ Scraping news website and organizing news data and sent that news to telegram.
 
 This Project use hirunews website.
 
-Packages:
+Used packages:
 
 node-telegram-bot-api
 
