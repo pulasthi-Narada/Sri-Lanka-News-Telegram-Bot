@@ -45,7 +45,7 @@ const getNewsforPreferredLanguage = async () => {
     news = await getNews('/English');
     ReadMore = 'Read More';
 
-    await sentnews(news, ReadMore, msg);
+    await sentNews(news, ReadMore, msg);
   });
 
   // Matches /සිංහල get sinhala news
@@ -53,7 +53,7 @@ const getNewsforPreferredLanguage = async () => {
     news = await getNews('/සිංහල');
     ReadMore = 'වැඩිදුර කියවන්න';
 
-    await sentnews(news, ReadMore, msg);
+    await sentNews(news, ReadMore, msg);
   });
 
   // Matches /தமிழ் get tamil news
@@ -61,12 +61,12 @@ const getNewsforPreferredLanguage = async () => {
     news = await getNews('/தமிழ்');
     ReadMore = 'மேலும் படிக்க';
 
-    await sentnews(news, ReadMore, msg);
+    await sentNews(news, ReadMore, msg);
   });
 };
 
 //set news to Telegram
-const sentnews = async (news, ReadMore, msg) => {
+const sentNews = async (news, ReadMore, msg) => {
   // reverse news array for get latest news end of chat
   news.reverse();
 
@@ -77,6 +77,11 @@ const sentnews = async (news, ReadMore, msg) => {
       `${n.image} \n\n ${n.title} \n\n ${ReadMore} \n ${n.ReadMore}\n\n ${n.dateAndTime}`,
     );
   }
+
+  await bot.sendMessage(
+    msg.chat.id,
+    'News provider: hirunews \n\n https://www.hirunews.lk/',
+  );
 };
 
 (async function () {

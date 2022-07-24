@@ -75,6 +75,7 @@ const GetRequestNewsPage = async (newsPage) => {
 
 // scrap News From given Page
 const scrapNewsFromPage = (page) => {
+ 
   const $ = page;
   const news = [];
   let currentDate;
