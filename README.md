@@ -8,7 +8,7 @@ Project description
 
 Scraping news website and organizing news data and sent that news to telegram.
 
-This Project use hirunews website.
+This Project use <a href="https://www.hirunews.lk/">hirunews website</a>.
 
 Used packages:
 
