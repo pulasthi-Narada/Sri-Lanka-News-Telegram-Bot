@@ -8,7 +8,7 @@ Project description
 
 Scraping news website and organizing news data and sent that news to telegram.
 
-This Project use <a href="https://www.hirunews.lk/">hirunews website</a>.
+This Project use <a href="https://www.hirunews.lk/" target="_blank">hirunews website</a>.
 
 Used packages:
 
@@ -16,14 +16,14 @@ node-telegram-bot-api, axios, cheerio, dotenv, nodemon
 
 Project Demo:
 
-Go to this Link for wake heroku news telegram bot.
+1) Go to this Link for wake heroku news telegram bot.
+
+<a href="https://sl-news-telegrambot.herokuapp.com/" target="_blank">sl-news-telegrambot.herokuapp.com</a>.
 
 
-https://sl-news-telegrambot.herokuapp.com/
+2) After that Run news telegram bot in telegram.
+<a href="https://t.me/DailyNewsForSriLanka_bot" target="_blank">Daily News For SriLanka bot</a>.
 
-After that Run news telegram bot in telegram.
-
-https://t.me/DailyNewsForSriLanka_bot
 
 <img src="img/1.png"><br/>
 <img src="img/2.png"><br/>
